@@ -10,7 +10,6 @@ class Embedding:
         
     @property
     def azure_openai(self):
-        """text-embedding-ada-002"""
         azure_endpoint = os.getenv('ENDPOINT')
         azure_embedding = os.getenv('EMBEDDING')
         azure_openai_key = os.getenv('OPENAI_KEY')

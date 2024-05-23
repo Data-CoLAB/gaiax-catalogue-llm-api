@@ -6,7 +6,7 @@ from src.backend.embeddings.vector_db import Vector_DB
 class DatasetEmbedding:
     def __init__(self) -> None:
         v = Vector_DB()
-        self.db = v.retrieve(Embedding().azure_openai, collection='search')
+        self.db = v.retrieve(Embedding().openai(model='text-embedding-ada-002'), collection='search')
 
     def add_text(self, text: str, metadata: dict):
         self.db.add_texts([text], metadatas=[metadata])
