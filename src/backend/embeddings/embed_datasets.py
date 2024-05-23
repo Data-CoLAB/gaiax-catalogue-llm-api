@@ -1,3 +1,5 @@
+import sys
+sys.path.append('')
 from src.backend.embeddings.embedding import Embedding
 from src.backend.embeddings.vector_db import Vector_DB
 
