@@ -14,7 +14,7 @@ class LLM_Searcher:
         list_similar = self.embed_DB.get_similar(query, k=100)
         print(list_similar)
         for similar in list_similar:
-            filename = similar[0].metadata['id']
+            filename = similar[0].metadata['vc_id']
             if filename in dataset_dict:
                 if similar[1] < dataset_dict[filename]:
                     dataset_dict[filename] = similar[1]
