@@ -27,7 +27,7 @@ class Embedding:
         return self._embedding
     
     @property
-    def openai(self, model='text-embedding-3-small'):
+    def openai(self, model='text-embedding-ada-002'):
         openai_key = os.getenv('OPENAI_KEY')
         
         assert openai_key is not None, "OpenAI key not provided."

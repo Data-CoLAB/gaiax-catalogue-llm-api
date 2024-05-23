@@ -12,10 +12,12 @@ RUN pip install poetry
 WORKDIR /app
 
 # Copy pyproject.toml and poetry.lock files
-COPY pyproject.toml poetry.lock /app/
+COPY pyproject.toml poetry.lock .env /app/
 
 # Install dependencies
 RUN poetry config virtualenvs.create false && poetry install --no-dev
+
+RUN pip install pymilvus
 
 # Copy the rest of the application code
 COPY src /app/src
