@@ -2,7 +2,7 @@ from langchain_community.vectorstores import Milvus
 from dotenv import load_dotenv
 import os
 
-class Vector_DB():
+class Vector_DB:
     def __init__(self):
         load_dotenv()
 
