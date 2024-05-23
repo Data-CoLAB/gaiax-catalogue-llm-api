@@ -2,7 +2,10 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Dict
 
-from backend.llms_to_search import LLM_Searcher
+import sys
+sys.path.append('')
+
+from src.backend.llms_to_search import LLM_Searcher
 
 app = FastAPI()
 llm_searcher = LLM_Searcher()
