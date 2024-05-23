@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "gaia-x-llm-api"
+version = "0.1.0"
+description = ""
+authors = ["joao-ferreira-dc <158472420+joao-ferreira-dc@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+pydantic = "^2.7.1"
+langchain-openai = "^0.1.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
